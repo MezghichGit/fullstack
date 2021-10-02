@@ -11,7 +11,7 @@ public class EtudiantController {
 	public String message(Model model)
 	{
 		System.out.println("Bienvenue au BootCamp");
-		String formation = "fullstack";
+		String formation = "fullstack 100% Spring boot";
 		return "info";
 	}
 
