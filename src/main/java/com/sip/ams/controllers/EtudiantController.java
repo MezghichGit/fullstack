@@ -54,7 +54,6 @@ public class EtudiantController {
 		mv.setViewName("listStudents");
 		return mv;
 	}
-
 	// @GetMapping("/add")
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public ModelAndView addStudentForm() {
@@ -63,13 +62,12 @@ public class EtudiantController {
 		return mv;
 
 	}
-
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String addStudent(@RequestParam("id") int id, @RequestParam("nomEtudiant") String nom,
+	public String addStudent(
+			@RequestParam("id") int id, 
+			@RequestParam("nomEtudiant") String nom,
 			@RequestParam("email") String email) {
-		// ModelAndView mv = new ModelAndView();
-		// mv.setViewName("listStudents");
-		// return mv;
+		
 		Etudiant e = new Etudiant(id, nom, email);
 		etudiants.add(e);
 		return "redirect:students";
