@@ -12,6 +12,9 @@ public class EtudiantController {
 	{
 		System.out.println("Bienvenue au BootCamp");
 		String formation = "fullstack 100% Spring boot";
+		String lieu ="Sesame";
+		model.addAttribute("training", formation);
+		model.addAttribute("location", lieu);
 		return "info";
 	}
 
